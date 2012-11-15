@@ -14,11 +14,12 @@
 
 @implementation QPAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2;
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[QPFirstViewController alloc] initWithNibName:@"QPFirstViewController_iPhone" bundle:nil];
         viewController2 = [[QPSecondViewController alloc] initWithNibName:@"QPSecondViewController_iPhone" bundle:nil];
@@ -26,8 +27,12 @@
         viewController1 = [[QPFirstViewController alloc] initWithNibName:@"QPFirstViewController_iPad" bundle:nil];
         viewController2 = [[QPSecondViewController alloc] initWithNibName:@"QPSecondViewController_iPad" bundle:nil];
     }
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+  
+    UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    
+    self.tabBarController.viewControllers = @[nc1, viewController2];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

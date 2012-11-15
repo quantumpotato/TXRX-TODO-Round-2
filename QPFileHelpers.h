@@ -10,8 +10,8 @@
 
 @interface QPFileHelpers : NSObject {}
 
-+ (BOOL)fileExistsNamed:(NSString *)fileName;
++ (BOOL)fileExistsAtPath:(NSString *)fileName;
 + (NSString *)documentsPathWithPath:(NSString *)path;
-+ (BOOL)fileExistsAtPath:(NSString *)path;
++ (BOOL)documentsFileExistsWithPath:(NSString *)path;
 
 @end

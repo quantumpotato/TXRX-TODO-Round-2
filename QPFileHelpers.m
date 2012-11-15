@@ -20,7 +20,7 @@
     return [documentsDirectory stringByAppendingPathComponent:path];
 }
 
-+ (BOOL)fileExistsNamed:(NSString *)fileName {
++ (BOOL)documentsFileExistsWithPath:(NSString *)fileName {
     fileName = [self documentsPathWithPath:fileName];
     return [self fileExistsAtPath:fileName];
 }

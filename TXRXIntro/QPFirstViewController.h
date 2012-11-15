@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QPEditTaskViewController.h"
 
-@interface QPFirstViewController : UIViewController
+@interface QPFirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, QPNewTaskProtocol> {
+}
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *actionItems;
+
 
 @end

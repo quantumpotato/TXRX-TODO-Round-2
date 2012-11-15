@@ -7,21 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QPTask.h"
 
 @protocol QPNewTaskProtocol;
 
-@interface QPEditTaskViewController : UIViewController
+@interface QPEditTaskViewController : UIViewController <UITextFieldDelegate> {
+
+}
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (assign, nonatomic) id <QPNewTaskProtocol> delegate;
-@property (strong, nonatomic) NSString *task;
+@property (strong, nonatomic) QPTask *task;
 
-- (id)initWithTask:(NSString *)task;
+- (id)initWithTask:(QPTask *)task;
 
 @end
 
 @protocol QPNewTaskProtocol <NSObject>
 
-- (void)taskCreated:(NSString *)task;
+- (void)taskCreated:(QPTask *)task;
+- (void)taskEdited:(QPTask *)task;
+- (void)cancelledEditingTask:(QPTask *)task;
 
 @end
+
+

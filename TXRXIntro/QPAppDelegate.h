@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QPAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface QPAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate > {
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

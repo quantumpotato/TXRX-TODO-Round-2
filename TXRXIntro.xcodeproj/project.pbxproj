@@ -26,6 +26,10 @@
 		0E2E0B341646E65C00A0F44B /* QPFirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E2E0B321646E65C00A0F44B /* QPFirstViewController_iPad.xib */; };
 		0E2E0B371646E65C00A0F44B /* QPSecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E2E0B351646E65C00A0F44B /* QPSecondViewController_iPhone.xib */; };
 		0E2E0B3A1646E65C00A0F44B /* QPSecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E2E0B381646E65C00A0F44B /* QPSecondViewController_iPad.xib */; };
+		0E64452D164706F300B59A4C /* QPEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E64452B164706F300B59A4C /* QPEditTaskViewController.m */; };
+		0E64452E164706F300B59A4C /* QPEditTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E64452C164706F300B59A4C /* QPEditTaskViewController.xib */; };
+		0E86A231165421D0005CED14 /* QPTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E86A230165421D0005CED14 /* QPTask.m */; };
+		0E86A23816543BAE005CED14 /* QPFileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E86A23716543BAE005CED14 /* QPFileHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,13 @@
 		0E2E0B331646E65C00A0F44B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QPFirstViewController_iPad.xib; sourceTree = "<group>"; };
 		0E2E0B361646E65C00A0F44B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QPSecondViewController_iPhone.xib; sourceTree = "<group>"; };
 		0E2E0B391646E65C00A0F44B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QPSecondViewController_iPad.xib; sourceTree = "<group>"; };
+		0E64452B164706F300B59A4C /* QPEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QPEditTaskViewController.m; path = ../QPEditTaskViewController.m; sourceTree = "<group>"; };
+		0E64452C164706F300B59A4C /* QPEditTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QPEditTaskViewController.xib; path = ../QPEditTaskViewController.xib; sourceTree = "<group>"; };
+		0E86A22E16541F24005CED14 /* QPEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QPEditTaskViewController.h; path = ../QPEditTaskViewController.h; sourceTree = "<group>"; };
+		0E86A22F165421D0005CED14 /* QPTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QPTask.h; path = ../QPTask.h; sourceTree = "<group>"; };
+		0E86A230165421D0005CED14 /* QPTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QPTask.m; path = ../QPTask.m; sourceTree = "<group>"; };
+		0E86A23616543BAE005CED14 /* QPFileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QPFileHelpers.h; sourceTree = "<group>"; };
+		0E86A23716543BAE005CED14 /* QPFileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QPFileHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +111,7 @@
 		0E2E0B0F1646E65C00A0F44B /* TXRXIntro */ = {
 			isa = PBXGroup;
 			children = (
+				0E86A23A16543BC1005CED14 /* Task */,
 				0E2E0B181646E65C00A0F44B /* QPAppDelegate.h */,
 				0E2E0B191646E65C00A0F44B /* QPAppDelegate.m */,
 				0E2E0B211646E65C00A0F44B /* QPFirstViewController.h */,
@@ -110,10 +122,14 @@
 				0E2E0B291646E65C00A0F44B /* QPSecondViewController.m */,
 				0E2E0B2B1646E65C00A0F44B /* second.png */,
 				0E2E0B2D1646E65C00A0F44B /* second@2x.png */,
+				0E86A22E16541F24005CED14 /* QPEditTaskViewController.h */,
+				0E64452B164706F300B59A4C /* QPEditTaskViewController.m */,
+				0E64452C164706F300B59A4C /* QPEditTaskViewController.xib */,
 				0E2E0B2F1646E65C00A0F44B /* QPFirstViewController_iPhone.xib */,
 				0E2E0B321646E65C00A0F44B /* QPFirstViewController_iPad.xib */,
 				0E2E0B351646E65C00A0F44B /* QPSecondViewController_iPhone.xib */,
 				0E2E0B381646E65C00A0F44B /* QPSecondViewController_iPad.xib */,
+				0E86A23916543BB1005CED14 /* lib */,
 				0E2E0B101646E65C00A0F44B /* Supporting Files */,
 			);
 			path = TXRXIntro;
@@ -131,6 +147,25 @@
 				0E2E0B1F1646E65C00A0F44B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E86A23916543BB1005CED14 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0E86A23616543BAE005CED14 /* QPFileHelpers.h */,
+				0E86A23716543BAE005CED14 /* QPFileHelpers.m */,
+			);
+			name = lib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E86A23A16543BC1005CED14 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				0E86A22F165421D0005CED14 /* QPTask.h */,
+				0E86A230165421D0005CED14 /* QPTask.m */,
+			);
+			name = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +232,7 @@
 				0E2E0B341646E65C00A0F44B /* QPFirstViewController_iPad.xib in Resources */,
 				0E2E0B371646E65C00A0F44B /* QPSecondViewController_iPhone.xib in Resources */,
 				0E2E0B3A1646E65C00A0F44B /* QPSecondViewController_iPad.xib in Resources */,
+				0E64452E164706F300B59A4C /* QPEditTaskViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +247,9 @@
 				0E2E0B1A1646E65C00A0F44B /* QPAppDelegate.m in Sources */,
 				0E2E0B231646E65C00A0F44B /* QPFirstViewController.m in Sources */,
 				0E2E0B2A1646E65C00A0F44B /* QPSecondViewController.m in Sources */,
+				0E64452D164706F300B59A4C /* QPEditTaskViewController.m in Sources */,
+				0E86A231165421D0005CED14 /* QPTask.m in Sources */,
+				0E86A23816543BAE005CED14 /* QPFileHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +392,7 @@
 				0E2E0B3F1646E65C00A0F44B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
